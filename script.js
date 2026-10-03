@@ -105,3 +105,8 @@ if(page==="calendar"){
   next.onclick=()=>{if(++m>11){m=0;y++}draw()};
   draw();
 }
+
+/* Home microphone: pause its morphing when motion is reduced or the art is hidden (mobile). */
+if(matchMedia("(prefers-reduced-motion:reduce)").matches||matchMedia("(max-width:760px)").matches){
+  const s=document.querySelector(".hero-art svg");if(s&&s.pauseAnimations)s.pauseAnimations();
+}
