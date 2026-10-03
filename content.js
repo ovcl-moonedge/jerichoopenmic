@@ -14,9 +14,9 @@ const ARCHIVE = [
   { id:"example-artwork", type:"image", category:"Artwork", title:"Title of an artwork", author:"Student name", school:"School name",
     file:"media/archive/example-artwork.jpg",
     caption:"Caption or description appears here, beneath the artwork." },
-  { id:"example-poem", type:"pdf", category:"Writing", title:"Title of a poem", author:"Student name", school:"School name",
+  { id:"cheryn-yun-gratitude", type:"pdf", category:"Writing", title:"Gratitude", author:"Isabella-Cheryn Yun", school:"Bronx High School of Science",
     file:"media/archive/example-poem.pdf",
-    caption:"Caption or description appears here, beneath the PDF." }
+    caption:"Literary prose, November 2025" }
 ];
 
 /* type: "image" or "video". Newest first. */
