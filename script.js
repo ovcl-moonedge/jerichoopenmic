@@ -9,7 +9,7 @@ const page=document.body.dataset.page;
 if(page==="archive"){
   const el=document.getElementById("archive-grid");
   el.innerHTML=ARCHIVE.length?ARCHIVE.map(p=>{const cat=p.category||(p.type==="pdf"?"Writing":"Photography");
-    return `<a class="tile" href="piece.html?id=${encodeURIComponent(p.id)}"><div class="tile-media">`+
+    return `<a class="tile" href="piece.html?id=${encodeURIComponent(p.id)}"><div class="tile-media${p.type==="image"?"":" is-text"}">`+
     (p.type==="image"?`<img src="${esc(p.file)}" alt="${esc(p.title)} by ${esc(p.author)}" loading="lazy" onerror="${missing}">`
     :`<div class="text-tile"><h3>${esc(p.title)}</h3></div>`)+
     `<span class="chip">${esc(cat)}</span></div><div class="cap"><strong>${esc(p.title)}</strong><span>${esc(p.author)}</span>${p.school?`<span class="school">${esc(p.school)}</span>`:""}</div></a>`}).join(""):
