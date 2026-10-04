@@ -157,6 +157,17 @@ h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
 .tile .cap .school{display:block}
 .archive-grid .cap strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
+/* archive hover: the image area lights up bright lavender, its text turns dark */
+.tile-media{isolation:isolate;--glow:var(--pink-lavender);--glow-o:.72}
+.tile-media.is-text{--glow-o:1}
+.tile-media::after{content:"";position:absolute;inset:0;background:var(--glow);opacity:0;transition:opacity .35s;pointer-events:none}
+.tile-media .text-tile h3,.tile-media .missing{position:relative;z-index:1;transition:color .3s}
+.chip{z-index:1;transition:color .3s,background-color .3s,border-color .3s}
+.archive-grid .tile:hover .tile-media::after,.archive-grid .tile:focus-visible .tile-media::after{opacity:var(--glow-o)}
+.archive-grid .tile:hover .text-tile h3,.archive-grid .tile:focus-visible .text-tile h3,
+.archive-grid .tile:hover .missing,.archive-grid .tile:focus-visible .missing{color:var(--navy)}
+.archive-grid .tile:hover .chip,.archive-grid .tile:focus-visible .chip{color:var(--navy);background:transparent;border-color:var(--navy)}
+
 /* piece */
 .piece{max-width:60rem;margin:0 auto;padding-top:2rem}
 .piece-media img{display:block;max-width:100%;max-height:80vh;margin:0;border:1px solid var(--rule)}
