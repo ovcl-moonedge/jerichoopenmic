@@ -117,7 +117,7 @@ if(page==="home"){
     .then(r=>{if(!r.ok)throw 0;return r.json()})
     .then(d=>{
       const all=d.members||[],people=all.filter(m=>!/carlbot/i.test(m.username)),ms=people.slice(0,25),online=Math.max(0,(+d.presence_count||0)-(all.length-people.length));
-      box.innerHTML=`<p class="discord-count">${+d.presence_count||0} online now</p>`+
+      box.innerHTML=`<p class="discord-count">${online} online now</p>`+
         (ms.length?`<ul class="discord-members">`+ms.map(m=>`<li><img src="${esc(m.avatar_url)}" alt="" loading="lazy"><span>${esc(m.username)}</span><span class="dot ${esc(m.status)}" title="${esc(m.status)}"></span></li>`).join("")+`</ul>`:"")+
         (d.instant_invite?`<a class="btn" href="${esc(d.instant_invite)}" target="_blank" rel="noopener">Join the server</a>`:"");
     })
