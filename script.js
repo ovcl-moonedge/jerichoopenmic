@@ -110,3 +110,16 @@ if(page==="calendar"){
 if(matchMedia("(prefers-reduced-motion:reduce)").matches||matchMedia("(max-width:760px)").matches){
   const s=document.querySelector(".hero-art svg");if(s&&s.pauseAnimations)s.pauseAnimations();
 }
+/* Discord widget (home): rendered from Discord's public widget JSON */
+if(page==="home"){
+  const box=document.getElementById("discord-body");
+  fetch("https://discord.com/api/guilds/1556804864024252466/widget.json")
+    .then(r=>{if(!r.ok)throw 0;return r.json()})
+    .then(d=>{
+      const ms=(d.members||[]).slice(0,25);
+      box.innerHTML=`<p class="discord-count">${+d.presence_count||0} online now</p>`+
+        (ms.length?`<ul class="discord-members">`+ms.map(m=>`<li><img src="${esc(m.avatar_url)}" alt="" loading="lazy"><span>${esc(m.username)}</span><span class="dot ${esc(m.status)}" title="${esc(m.status)}"></span></li>`).join("")+`</ul>`:"")+
+        (d.instant_invite?`<a class="btn" href="${esc(d.instant_invite)}" target="_blank" rel="noopener">Join the server</a>`:"");
+    })
+    .catch(()=>{box.innerHTML=`<p class="discord-note">The community feed is unavailable right now.</p>`});
+}
