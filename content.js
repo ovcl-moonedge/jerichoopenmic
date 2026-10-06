@@ -11,9 +11,9 @@ const ARCHIVE = [
   { id:"example-photo", type:"image", category:"Photography", title:"Title of a photograph", author:"Student name", school:"School name",
     file:"media/archive/example-photo.jpg",
     caption:"Caption or description appears here, beneath the photograph." },
-  { id:"Kim Hak-Sun", type:"image", category:"Artwork", title:"Title of an artwork", author:"Clare Yoo", school:"Jericho High School",
+  { id:"Kim Hak-Sun", type:"image", category:"Artwork", title:"Kim Hak-Sun", author:"Clare Yoo", school:"Jericho High School",
     file:"media/archive/clare-yoo-kim-hak-sun.png",
-    caption:"Caption or description appears here, beneath the artwork." },
+    caption:"Kim Hak-Sun - A South Korean human rights activist. April, 2026" },
   { id:"cheryn-yun-gratitude", type:"pdf", category:"Writing", title:"Gratitude", author:"Isabella-Cheryn Yun", school:"Bronx High School of Science",
     file:"media/archive/cheryn-yun-gratitude.pdf",
     caption:"Literary prose, November 2025" }
