@@ -113,7 +113,7 @@ if(matchMedia("(prefers-reduced-motion:reduce)").matches||matchMedia("(max-width
 /* Discord widget (home): rendered from Discord's public widget JSON */
 if(page==="home"){
   const box=document.getElementById("discord-body");
-  fetch("https://discord.com/api/guilds/1556804864024252466/widget.json")
+  fetch("https://discord.com/api/guilds/1556804864024252466/widget.json?t="+Date.now(),{cache:"no-store"})
     .then(r=>{if(!r.ok)throw 0;return r.json()})
     .then(d=>{
       const ms=(d.members||[]).slice(0,25),online=Math.max(0,(+d.presence_count||0)-1);
