@@ -16,7 +16,7 @@ const ARCHIVE = [
     caption:"Kim Hak-Sun - A South Korean human rights activist. April, 2026" },
   { id:"cheryn-yun-gratitude", type:"pdf", category:"Writing", title:"Gratitude", author:"Isabella-Cheryn Yun", school:"Bronx High School of Science",
     file:"media/archive/cheryn-yun-gratitude.pdf",
-    caption:"Literary prose, November 2025" }
+    caption:"Literary prose. November, 2025" }
 ];
 
 /* type: "image" or "video". Newest first. */
