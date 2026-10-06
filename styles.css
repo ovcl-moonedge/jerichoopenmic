@@ -75,6 +75,11 @@ h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
 .feed-list small,.cal-list small{display:block;color:var(--muted);font-size:.9rem}
 .feed-empty{padding:.9rem 0;color:var(--muted);font-style:italic;font-size:1rem}
 
+/* discord widget (home) */
+.discord{margin-top:3rem}
+.discord .label{display:block;padding-bottom:.7rem;margin-bottom:1rem;border-bottom:1px solid var(--rule);max-width:24rem}
+.discord iframe{display:block;max-width:100%;border:0}
+
 /* home microphone: organic morphing (SMIL in index.html) + pulsing; hidden on mobile */
 .hero-art{justify-self:end;width:min(100%,24rem)}
 .hero-art svg{display:block;width:100%;height:auto;overflow:visible}
